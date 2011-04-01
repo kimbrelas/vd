@@ -9,11 +9,29 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <div>
-      <a href="<?php echo url_for('sf_guard_user') ?>">Edit Users</a>
-      <a href="<?php echo url_for('sf_guard_permission') ?>">Edit Permissions</a>
-      <a href="<?php echo url_for('sf_guard_group') ?>">Edit Groups</a>
-    </div>
+    <?php if($sf_user->isAuthenticated()): ?>
+      <div id="topBar">
+        <h1>Administration Panel</h1>
+      </div>
+      <div class = "admin_navigation">
+        <ul>
+          <li><a href="<?php echo url_for('sf_guard_user') ?>">Edit Users</a></li>
+          <li><a href="<?php echo url_for('sf_guard_permission') ?>">Edit Permissions</a></li>
+          <li><a href="<?php echo url_for('sf_guard_group') ?>">Edit Groups</a></li>
+          <li><a href="<?php echo url_for('sf_guard_signout') ?>">Log Out</a></li>
+        </ul>
+      </div>
+      
+      <div class = "admin_body">
+    <?php endif ?>
+    
     <?php echo $sf_content ?>
+    
+    <?php if($sf_user->isAuthenticated()): ?>
+      </div>
+      <div class = "footer">
+        <p>All information provided in this administration panel is private</p>
+      </div>
+    <?php endif ?>
   </body>
 </html>

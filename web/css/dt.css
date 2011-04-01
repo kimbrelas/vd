@@ -1,0 +1,19 @@
+/* 
+CSS 2.0
+Video Dukaan Stylesheet
+Author: Dominic Tancredi
+*/
+
+.newtrailersheader { padding:40px 60px 0 60px;width:840px;}
+.newtrailerspane { padding:40px 60px 0 60px;width:840px;}
+
+#newtrailers_navbar { display: block; height: 40px; }
+        #newtrailers_navbar ul {list-style:none; margin-top:11px;}
+            #newtrailers_navbar ul li {/* background: transparent url(../img/tabs/new_trailers_tab.png) 0 0 no-repeat; */ display:block; float:left; margin:0 10px 0 0; width:178px; height:40px;}
+                #newtrailers_navbar ul li a {background: transparent url(../img/tabs/new_trailers_tab.png) 0 0 no-repeat; width:178px; height:40px; font-family: Arial, sans-serif;  display:block; color:#000; text-decoration:none; font-size:17px; font-weight:bold; text-align:center;}
+                /*#navbar ul li a:hover{color:#CCC;}                
+                #newtrailers_navbar ul li a span {display:none;}*/
+                #newtrailers_navbar ul li a:hover { background: transparent url(../img/tabs/new_trailers_tab.png) top right no-repeat;  }
+                #newtrailers_navbar ul li.selected a {  background: transparent url(../img/tabs/new_trailers_tab.png) top right no-repeat; }
+    
+.movie { float: left; height: 208px; margin: 0 15px; text-align: center; width: 119px; }

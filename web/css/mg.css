@@ -1,0 +1,180 @@
+/* 
+CSS 2.0
+Video Dukaan Stylesheet
+Author: Matthew Good
+*/
+
+/*jquery ui styles */
+.ui-datepicker {
+	font-size:.75em;
+}
+
+/* Begin My Queue / History page styles */
+hr {
+	border:none;
+	background-color:#d9d9d9;
+	color:#d9d9d9;
+	height:5px;
+}
+.queuePage, .historyPage {
+	padding:50px 45px 45px 45px;
+}
+.queuePage ul#queueTabs {
+	border-bottom:1px solid #d9d9d9;
+	list-style:none;
+	margin:0;
+	padding-bottom:37px;
+}
+.queuePage ul#queueTabs li {
+	
+}
+.queuePage ul#queueTabs li a {
+	float:left;
+	width:174px;
+	height:26px;
+	background:url(../img/queue_history/tabs.gif) top left no-repeat;
+	margin-right:10px;
+	overflow:hidden;
+	padding:12px 0px 0px 0px;
+	text-align:center;
+	color:#000000;
+}
+.queuePage ul#queueTabs li a:hover {
+	background-position: 0px -38px;
+}
+/* set active states */
+#instantQueue ul#queueTabs li.instantTab a,
+#dvdQueue ul#queueTabs li.dvdTab a,
+#bluRayQueue ul#queueTabs li.bluRayTab a {
+	background-position:bottom left;
+}
+
+.QueueListContentDiv {
+	margin-top:30px;
+}
+
+/*table styles */
+.queueTable, .historyTable {
+	margin-top:10px;
+	width:100%;
+}
+.queueTable th, .historyTable th {
+	color:#0065A4;
+	font-size:10px;
+	font-weight:bold;
+	text-transform:uppercase;
+	border-top: 1px solid #d9d9d9;
+	padding-top:10px;
+	height:35px;
+}
+.queueTable th .tableSubHead {
+	text-transform:lowercase;
+}
+.queueTable tr.odd, .historyTable tr.odd {
+	background-color:#e2e2e2;
+}
+.queueTable tr td, .historyTable tr td {
+	vertical-align:middle;
+	font-size:12px;
+	padding:2px;
+	height:32px;
+	width: 120px;
+	
+}
+.historyTable tr td {
+	height:28px;
+}
+.queueTable tr td a.playLink {
+	display:block;
+	height:32px;
+	overflow-y: hidden;
+}
+#queueUpdateButtonDiv {
+	float:right;
+}
+.blueButtonLrg {
+	color:#ffffff;
+	background-color:#0069b3;
+	border:none;
+	padding:7px;
+	font-weight:bold;
+}
+a.blockLink {
+	display:block;
+	margin-right:10px;
+	clear:left;
+	float:left;
+}
+.grayText {
+	color:#6f6f6f;
+}
+.lightGrayText {
+	color:#6b6b6b;
+}
+.darkGrayText {
+	color:#646464;
+}
+#currentPlanDiv {
+	clear:both;
+	margin-bottom:45px;
+}
+#currentPlanList {
+	padding-left:25px;
+}
+#currentPlanList li {
+	color:#646464;
+	margin-bottom:5px;
+	font-weight:bold;
+}
+.bannerAdSpace {
+	text-align:center;
+	text-transform:uppercase;
+	font-size:10px;
+}
+.adLabel {
+	margin-top:10px;
+}
+/* History page */
+.summaryInfoDiv {
+	width:100%;
+	background-color:#f6efcd;
+	padding-top:15px;
+	padding-bottom:15px;
+	margin-bottom:5px;
+}
+.summaryInfoDiv #summaryTitleDiv {
+	float:left;
+	width:115px;
+	margin-left:30px;
+}
+.summaryInfoDiv #viewedTimeSubDiv {
+	float:left;
+	width:240px;
+	padding:10px 20px;
+	font-size:12px;
+	background-color:#e1d8b0;
+}
+.summaryInfoDiv #planDetailsSubDiv {
+	float:left;
+	margin-left:15px;
+	width:410px;
+	font-size:13px;
+}
+.summaryInfoDiv #planDetailsSubDiv li {
+	margin-bottom:3px;
+}
+ul.infoBullet {
+	list-style-image:url(../img/queue_history/info-bullet.png);
+	padding-left:25px;
+}
+.historyGrid {
+	margin-top:15px;
+}
+/* End My Queue / History page styles */
+
+/* Cart styles */
+.errorListItem {
+	background:url(../img/error_icon.gif) left no-repeat;
+	padding-left:25px;
+}
+/* End cart styles */

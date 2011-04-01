@@ -1,0 +1,208 @@
+
+
+/* MEYER RESET | v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* START HERE */ 
+
+
+body {background: white  repeat 0px 0px;}
+
+#topBar {
+	background: url(/images/admin/admin-panel-top-border.png);
+	width: 100%;
+	min-height: 100px;
+	repeat: x;
+}	
+
+a {
+	color: black;
+}
+
+a:hover {
+	background-color: #EEDD23;
+	color: black;
+}
+#topBar h1 {
+	font-size: 32px;
+	font-weight: normal;
+	position: relative;
+	top: 60px;
+	left: 20px;
+}	
+.clearfix {clear:both;}
+
+.pagetitle {font-size:18px; padding:3px;}
+
+
+.admin_navigation ul{
+	list-style-type:none;
+	width:180px;
+	display:block;
+	float:left;
+}
+
+.admin_navigation ul li{
+	float:left;	
+	text-align:center;
+}
+
+.admin_navigation ul li a {
+	display:block;
+	font-size:14px;
+	text-align: left;
+	border-bottom: 1px #EEDD23 dotted;
+	width:150px;
+	padding:5px;
+}
+
+
+.admin_navigation { float:left;}
+
+.admin_body {
+	width:800px;
+	padding-left:5px;
+	border-left:2px solid #0177C1;
+	border-top: 2px solid #0177C1; 	
+	float:left;
+}
+
+.footer {clear:both; border-top:2px solid #0177C1}
+
+label {font-size:12px; color:#333; font-weight:bold; margin-left:4px}
+
+.movie_detail label, input {width:150px;}
+.movie_detail label {display:inline-block;}
+
+input, select, option, textarea, fieldset {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border-style:solid;
+	border-width:1px;
+	border-color:black;
+	padding:3px;
+	margin:3px;
+}
+
+fieldset fieldset {
+	background-color:#CCC;	
+}
+
+.meta_info {
+	float:left;
+}
+fieldset {
+	background-color:#DDD;	
+}
+
+
+form {
+	float:left;
+}
+
+
+dl.metadata dt{
+	display:block;
+	margin-bottom:5px;
+}
+
+dl.metadata dd{
+	display:block;
+	margin:2px;
+}
+
+
+
+
+.adminloginwrapper {
+	margin:auto;
+	text-align:center;	
+	width:100%;
+	height:100%;
+	color:white;
+}
+.adminloginwrapper h1 {
+	font-size: 20px;
+	font-family: Arial;
+	margin:5px;
+	text-align:left;
+}
+
+.adminloginbox {
+	width:400px;
+	height:200px;
+	text-align:right;
+	background-color:#0177C1;
+	margin:150px auto 0;
+	padding:15px;
+	border:5px solid black;
+	border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+.adminloginbox input {
+	margin:5px;
+	width: 200px;
+}
+
+.adminloginbox label {
+	width:100px;
+	display:block;
+	float:left;
+	color:white;
+	line-height:18px;
+	margin:5px;
+}

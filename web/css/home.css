@@ -1,0 +1,463 @@
+/*jobs*/
+#jobs_label{position:relative; float:left; width:100%; height:30px; font-size:26px; padding:20px 0 0 0; border-bottom:1px solid #e5e5e5; font-weight:bold;}
+div.jobs_content{padding:20px; min-height:600px;}
+#job_types_menu{float:left; width:100%; text-align:left;}
+#job_types_menu ul li{list-style-type:none; float:left; height:15px; min-width:40px; padding:2px 5px; line-height:10px; font-size:10px;}
+#jobs_text{float:left; width:100%; min-height:20px; padding:20px 0; font-size:12px;}
+#jobs_sub_label{float:left; width:100%; height:22px; font-size:18px; padding:20px 0 0 0; font-weight:200;}
+#jobs_table{float:left; width:100%; min-height:50px; background-color:#f0f0f0;}
+#jobstable thead tr th.header{padding:10px 20px; background:url(/img/nav/sort_none.png); background-repeat:no-repeat; background-position:10px center; cursor: pointer;}
+#jobstable tbody tr td{ padding:10px;}
+#jobstable tr.odd{background-color:#F3EAC4;}
+#jobstable tr.even{background-color:#f0f0f0;}
+#jobstable thead tr th.headerSortUp{background:url(/img/nav/sort_asc.png); background-repeat:no-repeat; background-position:10px center; cursor: pointer;}
+#jobstable thead tr th.headerSortDown{background:url(/img/nav/sort_desc.png); background-repeat:no-repeat; background-position:10px center; cursor: pointer;}
+/*job display*/
+#jobdisplaytopnav{background:url(/img/buttons/browse_arrow_back.png) no-repeat left; height:23px; width:100%; padding-left:50px; line-height:23px; vertical-align:middle;}
+#jobtitle{position:relative; float:left; width:840px; height:50px; font-size:16px; padding:40px 0 0 0; margin:0 40px; border-bottom:1px solid #e5e5e5; font-weight:bold;}
+#largetitle{font-size:20px;}
+#smalltitle{font-size:16px; line-height:20px;}
+.jobrow{width:840px; min-height:20px; float:left; clear:both; margin:10px 40px;}
+.joblabel{width:200px; min-height:20px; float:left; font-size:14px; font-weight:bold;}
+.jobtext{width:640px; min-height:20px; float:left; font-size:12px;}
+#jobline{position:relative; float:left; width:840px;margin:0 40px; border-bottom:1px solid #e5e5e5;}
+#jobbottom{width:840px; height:30px; float:left; clear:both; margin:0 40px;}
+#jobbottombutton{width:420px; height:30px; float:left; text-align:center; line-height:30px; vertical-align:middle;}
+/*end jobs*/
+/*rent_gallery*/
+.galleryinfo{float:right; width:175px; height:320px; padding-right:25px; margin-left:8px;}
+.info_text{margin: 0 0 10px 0; padding:10px 0 10px 0; border-bottom:solid 1px #e5e5e5;}
+.row_header{width:968px; height:34px; margin-left:-8px;}
+div.grad_devider_full{width:910px; height:38px; margin:0 25px; background-image:url(/img/grad_divider_full_width.jpg); background-position:center; }
+.gradientdivider{width:960px; height:1px; margin:50px 0 0px 0; text-align:center;}
+.gradientdividerlarge{width:922px; height:1px; margin:8px auto 20px; text-align:center;}
+.gradientdividerlarge hr { color: #1a1a1a; height: 1px; width: 922px;}	
+	/*watch*/
+	.watch_small_thumb{
+		width:59px;
+		height:86px;
+		border:1px solid #395060;
+		/*23px*/
+	}
+	div.watch_small_thumb{float:left; margin:15px 15px 3px 8px;}
+	.info_pref_link{padding:10px 0 0 8px;}
+	.info_pref_link a{font-size:15px;}
+	#rent_gallery_seeall{width:923px; text-align:right}
+/*end rent_galery*/
+#my_prefferences{ height:170px; width:880px; margin:10px 40px 0 40px; }
+div.my_prefferences_list{float:left; width:180px;  padding:10px 0 10px 0; line-height:20px; line-height:25px;}
+span.smalllink{font-size:10px;}
+
+#rent_gallery_top{ background: transparent url(/img/grad_divider.jpg) no-repeat center bottom; height:340px; margin:30px 30px 0 40px; padding: 0 0 40px 0; }
+#gallery_top_info{ float:left; width:321px; height:324px; margin-left:30px;}
+	#sponsor_text{color:#808080; font-size:10px;}
+	#missed_movie_title{ font-size:16px; text-decoration: underline; margin: 0 0 10px 0; }
+#gallery_top_history{float:left; background-color:#f0f0f0; border: 1px solid #d7d7d7; width:283px; height:175px; padding:20px 15px;}
+tr.rentaltblalt{background-color:#f3eac4;}
+table.rentalhistory{font-size:10px; width:285px; height:120px;}
+#rentalhistorytableheader{margin:5px 0 10px 10px;}
+#rentalhistorytableheader s{font-size:14px;}
+table.rentalhistory th{font-weight:bold;}
+table.rentalhistory tr{height:20px;}
+table.rentalhistory td{padding:5px 10px;}
+#rentalhistoryviewall{text-align:right;}
+#rentalhistoryviewall a{font-size:9px; color:#000; text-decoration:underline;}
+
+.display_wrapper {position:relative; width:960px; }
+.display_row_titles_wrapper{margin:20px 0 0 0; }
+
+.scrollarrow{cursor:pointer;float:left;margin-top:100px; height:94px; width:26px;}
+
+/*movie display rent*/
+span.bluehighlight2 {color: #0177c1;}
+<!--h4{margin:-10;}-->
+h6{}
+#wrapper{
+	padding:20px;
+	/*background-color:#CCF;*/
+	background-color:#FFF;
+	float:left;
+}
+#top_container{
+	float:left;
+	height:auto;
+	padding-left:41px;
+	width:930px;
+	/*background-color:#999;*/
+}
+#cover{
+	float:left;
+	width:276px;
+	height:432px;
+}
+#title{
+	text-align:center;
+	vertical-align:middle;
+	height:20px;
+	margin:20px 0 20px 0;
+}
+#cover_image{
+	height:323px;
+	vertical-align:middle;
+	margin:0 26px 0 26px;
+}
+#rating{
+	height:89px;
+	text-align:center;
+	color:#808080;
+}
+#starRatingContainerWrapper{
+	width:100px;
+	margin:10px 88px 0 88px;
+}
+.ratingNumber{
+	color:#0069b3;
+	font-weight:bold;
+}
+
+#options{
+	float:left;
+	width:615px;
+	height:432px; 
+	/*background-color:#9C6;*/
+}
+#options_title{
+	line-height:32px;
+	text-align:center;
+	margin:10px 0;
+}
+#options_formats{
+	font-size:12px;
+}
+.options_buttons{
+	line-height:32px;
+	margin:13px 0;
+	width:380px;
+	height:32px;
+}
+.option_image{
+	float:left;
+	position: relative;
+	width:70px;
+	height:32px;
+}
+.option_text_box{position:relative; float:left; line-height:16px;}
+#buttons{
+	width:359px;
+	padding:0 24px;
+	height:282px;
+	background-color:#f0f0f0;
+	border:1px solid #dbdbdb;
+	margin:60px 0 0 110px;
+}
+#dvd{float:left; width:40px; height:16px; margin:0 8px 0 15px;}
+#bluray{float:left; width:50px; margin:0 8px 0 15px;}
+#stream{float:left; width:140px; margin:0 8px 0 15px;}
+#ppv{float:left; width:180px; margin:0 8px 0 15px;}
+	.details{float:left; font-size:9px; line-height:16px; vertical-align:bottom;}
+	.bymail{position:absolute; left:15px; top:16px; font-size:10px; line-height:10px;}
+	.details2{position:absolute; left:15px; top:16px; font-size:10px; line-height:10px;}
+
+#bottom_container{
+	float:left;
+	padding-left:41px;
+	width:930px;
+	padding-bottom:20px;
+	/*background-color:#333;*/
+}
+#info{
+	float:left;
+	/*height:868px;*/
+	width:331px;
+	padding:10px 26px 0 0;
+	/*background-color:#0F3;*/
+}
+#trailer{
+	width331px:;
+	height:233px;
+	border:1px solid black;
+	margin:12px 0 20px 0;
+}
+
+#gradient{
+	width:521px;
+	height:47px;
+}
+#tab_placeholder{
+	width:442px;
+	height:451px;
+	margin-left:40px;
+}
+#tabs{
+	float:left;
+	height:868px;
+	width:508px;
+	/*background-color:#33C;*/
+}
+/*end movie display rent*/
+
+/*TOP50*/
+.top50Pane { padding: 20px; }
+.top50Pane h2 { margin: 25px 0 15px 0; }
+.top50Pane ol,  .top50Pane ul, .top50Pane li{ display: inline; }
+.top50_bar {  border-bottom: 1px solid  #e5e5e5; font-size: 13px; padding-bottom: 5px;}
+		.top50_bar li { margin-right: 15px; }
+		.top50_bar a, .top50_bar a:link { color: #181818;}
+		.top50_bar a:hover, .top50_bar a:active { color: #0069b3}
+		.top50_bar a.parent { background: transparent url(../img/sub_nav_bkgrd.gif) no-repeat 100% 60%; padding-right: 18px; }
+
+.shift {
+	width:26px;
+	height:22px;
+	background-position:5px 8px;
+	background-repeat:no-repeat;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	padding-left:20px;
+	line-height:22px;
+}
+.shift_new {
+	background-color:#15b10f;
+	width:44px;
+	height:22px;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	line-height:22px;
+	text-align:center;
+}
+.shift_up {
+	background-color:#15b10f;
+	background-image:url(../img/icons/shift_up.gif);
+}
+
+.shift_down {
+	background-color:#fd0513;
+	background-image:url(../img/icons/shift_down.gif);
+}
+		
+#top50Header{
+	width:850px;
+	height:34px;
+	margin-top:20px;
+}
+#sortBy{
+	float:left;
+	margin-left:-29px;
+	width:163px;
+	height:34px;
+}
+#sortBox{
+	float:left;
+	margin-left:10px;
+}
+
+#top50Table {  width: 850px; padding-left:40px; padding-top:20px;}
+		#top50Table table { border-bottom: 1px solid #e5e5e5; }
+		#top50Table table tr { background: #e2e2e2; height: 30px; }
+		#top50Table table tr.alt { background: #fff; }
+		#top50Table table th {  background: #fff;  color: #0065a4; font-size: 11px; font-weight: bold; height: 30px;}
+		#top50Table table td { font-size: 14px; font-weight: bold;}
+			#top50Table table td a, #top50Table table td a:link { color: #343434;}
+			#top50Table table td a:hover, #top50Table table td a:active { color: #0069b3;}
+			#top50Table table td p{ text-align:left; padding-left:10px; vertical-align:middle;}
+			.basic_movie { text-align: center; position: relative;}
+			#top50Table .basic_movie { margin: 4px;}
+			.basic_movie .starRatingContainer { margin-left: 55px;}
+			.basic_movie .boxart { border: 2px solid #2d4556; margin-top: 8px;} 
+			.basic_movie .title { margin-top: 12px; font-size: 12px; font-weight: bold; } 
+			.basic_movie .starRatingContainer, .basic_movie .decline { margin-top: 5px;}
+			.basic_movie .decline { background: transparent url(../img/icons/basic_movie_decline.png) no-repeat 0 3px; 
+				color: #545454; font-size: 10px; font-family: "Helvetica"; font-weight: bold; width: 115px; margin: 5px 0 0 55px;} 
+			.rbp_bar { bottom: 14px; position: absolute; text-align: center; width: 100%;}
+
+.pagination_bottom  { float: right; margin: 10px 0 0 0; }
+/*END TOP50*/
+
+/*HOW IT WORKS*/
+div.BSThatMakesItWork{/*for no good reason that I can tell when I delete this block the following block stops working*/
+	width:100px;
+	height:100px;
+}
+div.topBar{
+	width:946px;
+	height:105px;
+	padding-left:22px;
+	padding-top:44px;
+}
+div.infoBar{
+	width:986px;
+	/*height:44px;*/
+	padding-top:65px;
+	margin-left:-9px;
+	margin-bottom:19px;
+}
+div.infoBarButtons{
+	height:44px;
+	float:left;
+}
+div.infoBarButton1{
+	
+}
+div.infoBarButton2{
+	
+}
+div.infoBarButton3{
+	
+}
+div.infoColumns{
+	width:960px;
+	background-color:#FFF;
+}
+div.infoColumn1{
+	float:left;
+	width:312px;
+	margin-left:10px;
+	background-color:#FFF;
+}
+div.infoColumn2{
+	float:left;
+	width:312px;
+	background-color:#e5e3df;
+}
+div.infoColumn3{
+	float:left;
+	width:312px;
+	background-color:#FFF;
+}
+div.HIWimage1{
+	height:340px;
+	padding-top:19px;
+}
+div.HIWimage5{
+	height:17px;
+}
+div.HIWimage6{
+	height:217px;
+}
+div.HIWarrow{
+	height:28px;
+	background-image:url(/img/howitworks/arrow.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+div.HIWplus{
+	height:36px;
+	background-image:url(/img/howitworks/plus.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+#HIWimage1a{
+	padding-left:41.5px;
+}
+#HIWimage1b{
+	padding-left:42px;	
+}
+#HIWimage1c{
+	padding-left:23.5px;	
+}
+#HIWimage2{
+	padding-left:85.5px;
+}
+#HIWimage3{
+	padding-top:20px;
+	padding-left:85.5px;
+}
+#HIWimage4{
+	padding-top:20px;
+	padding-left:71.5px;
+	padding-bottom:10px;
+}
+#HIWimage5a{
+	padding-left:80.5px;
+	padding-bottom:10px;
+}
+#HIWimage5b{
+	padding-left:90px;
+	padding-bottom:10px;
+}
+#HIWimage6{
+	padding-left:52px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+
+
+/*END HOW IT WORKS*/
+
+
+/*HOME*/
+div.homeTop{
+	height:304px;
+	margin-left:0px;
+	padding: 20px 0 20px 20px;
+}	
+div.trailerWidget{
+	float:left;
+	height:304px;
+	width:594px;
+	background-image:url(/img/placeholder_Home.jpg);
+	/*border:1px solid #000;*/
+}
+div.homeAdFrame{
+	float:left;
+	width:321px;
+	height:304px;	
+	/*border:1px solid #000;*/
+	background-color:#dfdfdf;
+}
+div.homeAd{
+	width:300px;
+	height:250px;
+	background-color:#FFFFFF;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+}
+div.adText{
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:16px;
+	text-align:center;
+}
+.adFont{
+	color:#5c5c5c;
+	font-size:10px;
+	text-align:center;	
+}
+div.homeAnnouncementsImage{
+	height:34px;
+	width:969px;
+	background-image:url(../img/home_announcements.jpg);
+	margin-left:-9px;	
+}
+div.homeAnnouncement{
+	height:138px;	
+	width:920px;
+	margin-left:40px;
+	overflow:hidden;
+}
+div.homeBottom{
+	overflow-x: hidden;
+	position:relative;
+	height:138px;	
+	padding: 20px 0 20px 0;
+}
+li.ann_div{
+	list-style-type:none;
+	float:left;
+	width:252px;
+	height:138px;
+	margin-right:54px;
+}
+#ann_type_1{
+	background:url(../img/home_annoucement/div_ann_back.jpg);
+}
+#ann_type_2{
+	background:url(../img/home_annoucement/graphic_ann.jpg);	
+}
+/*END HOME*/

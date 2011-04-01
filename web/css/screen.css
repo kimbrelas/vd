@@ -1,0 +1,204 @@
+/*Video Dukaan screen stylesheet*/
+
+body {background:#D2B48C url(/images/bg.jpg) 0 0 repeat; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; color:#000; }
+h1,h2,h3,h4,h5,p, li, dd, dt {font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;}
+a {color:#0177C1;text-decoration:none;font-weight:bold;}
+a:hover {color:#0793CD;text-decoration:none;font-weight:bold;}
+h1{font-size:38px; font-weight:bold;}
+h2{font-size:34px; font-weight:bold;}
+h3{font-size:26px; font-weight:bold;}
+h4{font-size:20px;}
+h5{font-size:18px;}
+p {font-size:12px; line-height:18px;}
+p b, p strong {font-size:12.5px;}
+li {line-height:16px;}
+dt {font-weight:bold}
+dd,dt {font-size:12px; display:inline;}
+p.descriptiontext {color:#2F2F2F;}
+.bluehighlight {color: #0177c1;}
+.clearfix:after {
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+
+.inlinebold {font-weight:bold;font-size:105%;}
+
+#wrap { margin:auto; width:960px; text-align:center;}
+#container {margin:auto; width:960px; text-align:left;}
+
+#header { height:121px; }
+#header_memberlogin { height:85px; }
+	#logo { margin: 10px 0 0 -20px; }
+	
+    #loginbox {float:right; height:35px; width:200px; text-align:right;}
+        #loginbox a#top_login{height:32px; float: right; margin: 0 10px 0 0; width:135px; display:block; background-image:url(/images/nav/top_login.png); background-repeat:no-repeat;}
+        #loginbox a#top_login:hover {background-position:0 -32px;}
+        #loginbox a#top_login span {display:none;}
+    
+        #navbar { display: block; height: 35px; }
+        #navbar ul {list-style:none; margin-top:11px;}
+            #navbar ul li {background: transparent url(/images/nav/top_unselected.png) 0 0 no-repeat; display:block; float:left; margin:0 10px 0 0; width:75px; height:35px;}
+                #navbar ul li a {background: transparent url(/images/nav/nav_text.png) 0 3px no-repeat; width:75px; height:35px; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; text-transform:uppercase; display:block; color:black; text-decoration:none; font-size:13px; font-weight:bold; text-align:center;}
+                #navbar ul li a:hover{color:#CCC;}                
+                #navbar ul li a span {display:none;}
+                #navbar ul li a#n1 { background-position:0 3px }
+                #navbar ul li a#n1:hover { background-position:0 -28px }
+                #navbar ul li a#n2 { background-position:-70px 3px }
+                #navbar ul li a#n2:hover { background-position:-70px -28px }
+                #navbar ul li a#n3 { background-position:-140px 3px }
+                #navbar ul li a#n3:hover { background-position:-140px -28px }
+                #navbar ul li a#n4 { background-position:-210px 3px }
+                #navbar ul li a#n4:hover { background-position:-210px -28px }
+                #navbar ul li a#n5 { background-position:-280px 3px }
+                #navbar ul li a#n5:hover { background-position:-280px -28px }
+				#navbar ul li.selected {background:  transparent url(/images/nav/top_selected.png) 0 0 no-repeat;}
+                #navbar ul li.redbanner {background: transparent url(/images/nav/top_gold.png) top right no-repeat;}
+				  #navbar ul li.selectedredbanner {background: transparent url(/images/nav/top_gold_selected.png) top right no-repeat;}
+    #searchbar {float:right; background-color:#fed000; margin: 0 10px 0 0; padding:10px; }
+        #searchbar #searchbartext {color: #949494; height:20px; float:left; font-size: 11px; font-weight:bold; margin-right: 5px; padding: 0 5px; width:200px;}
+    input#topsearchbutton {background: transparent url(/images/nav/search_button.png) 0 0 no-repeat; width:36px; height:26px; display:block; float:right; padding: 0; border:0; text-decoration:none;}
+    input#topsearchbutton:hover {background-position:0 -26px;}
+#content {background: #fff; width:960px; }
+	.freetrial {  background: transparent url(/images/freetrial_grad_bkgrd.png) top right no-repeat; width: 100%;}
+
+/* FOOTER STYLES */
+#footer { color: #1b1b1b; font-size: 10px; line-height: 18px; margin: 5px 0 0 0; text-align: left; width: 960px; }
+	#footer_menu{float:left;}
+	#footer_tabs{ display: block; font-size:12px; font-weight: bold; margin-bottom:5px; line-height:14px; } 
+	#footer_other{line-height:10px;}
+	#footer li { display: inline; }
+	#footer li a,
+	#footer  a:link,
+	#footer  a:visited { color: #1b1b1b; font-weight: bold; display: inline; margin: 0 10px 0 0; }
+	#footer a:hover,
+	#footer a:active { text-decoration: underline; } 
+	
+	#footer img { display: inline; margin: 0 0 0 6px; } 
+		
+	#footer .footer_links {float: right; text-align:right; margin-bottom:10px; line-height:10px; width:400px;}
+	#footer .icons{float:right; width: 80px; text-align:right; margin-bottom:4px; margin-top:-1px;} 
+
+	#footer #copy { display: inline; font-size: 11px; font-weight: bold; margin: 0 0 8px 0; }
+	#footer_bottom { float:left; width:960px; /*background-color:#e4e1d8;*/ padding:5px 0; border-top: 1px solid #E4E1D8/*d7d7d5*/;}
+.rent_label {width:160px;height:34px; font-size:16px; text-transform:uppercase; color:#fed400; padding-right:10px; line-height:30px; background:transparent url(/images/rent_label_blank.png) 0 0 no-repeat; float:left; text-align:right;}
+/* SEARCH PAGE */
+#searchresults {
+	padding:10px;
+}
+
+#searchresults h2 {
+	font-size:18px;
+}
+
+.searchedfor {
+	font-size:18px;
+	margin:8px;
+}
+
+.searchedignored {
+	color: #999;
+	font-size:11px;
+	margin:8px;
+}
+
+.searchresultmovie div, .search_result_lva div {
+	margin:5px;
+}
+
+.searchresultmovie, .search_result_lva {
+	background-color:#E4E1D8;
+	padding:5px 10px 0;
+	margin:15px;	
+}
+.searchresultmovie .title, .search_result_lva .name {
+	font-size:16px;
+	font-weight:bold
+}
+
+
+.smallboxart {
+	height:87px;
+	width:60px;	
+	float:left;
+	margin: 4px 10px 0 0;
+}
+/* BASIC MOVIE DISPLAY */
+    .basic_movie {
+        width:210px;
+        height:320px;
+        background-color:#E4E1D8;
+        float:left; 
+        margin:2px;
+    }
+    
+	.basic_movie_smaller {
+        width:150px;
+        height:240px;
+        background-color:#E4E1D8;
+        float:left; 
+        margin:2px;
+		text-align:center;
+    }
+	
+	.basic_movie_smaller .title {
+		font-size:14px;	
+		padding:5px;
+		margin:3px;
+		color:#333;
+	}
+	
+	
+	.addedto {
+		font-size:20px;
+		font-weight:bold;
+		color:#333;
+	}
+	
+	.leftboxadded {
+		float:left;
+		width:130px;
+		height:300px;
+	}
+	
+/* STAR RATING STYLES */
+    .starRatingContainer {
+        width:100px;
+        height:18px;
+        background:url(/images/star/star_grey.png) repeat-x;
+    }
+    
+    .starRating {
+        background:url(/images/star/star_yellow.png) repeat-x;
+        display:block;
+        height:18px;    
+    }
+    
+    .starRated {
+        background:url(/images/star/star_blue.png) repeat-x;
+        display:block;
+        height:18px;    
+    }
+
+    .starStar {
+        /*background:url(/images/star/star_yellow.png) no-repeat;*/
+        width:20px;
+        height:18px;
+        display:inline-block;
+        margin:0;
+        padding:0;
+        position:relative;
+        top:-18px;
+    }
+    
+    
+    
+    
+   
+   

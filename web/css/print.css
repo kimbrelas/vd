@@ -1,0 +1,13 @@
+/* Video Dukaan Print Stylesheet */
+
+/* header, footer */
+div#loginbox, div#navbar, div#searchbar, div#footer {display:none;}
+
+/* info/submit_step_2 (film submission form) */
+a.corplft, a.corprgt, a.submit_form_print {display:none;}
+div.submit_form_box {background-color:#FFF;font:bold 14px arial,sans-serif;margin:20px auto;padding:10px 15px;text-align:left;width:500px;}
+	div.submit_form_box div {float:left;height:22px;margin:5px 0px;width:100%;}
+	div.submit_form_box div.submit_form_filmnote {height:50px;margin-bottom:10px;}
+		div.submit_form_box div input, div.submit_form_box div textarea {float:right;width:70%;}
+	div.submit_form_box input.submit_fillable, div.submit_form_box textarea.submit_fillable {background-color:#FFF;color:#FFF;border-width:0px;border-bottom:2px solid #000;}
+	div.submit_form_box input.submit_check_2 {margin:20px 0;}
