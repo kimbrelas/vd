@@ -6,6 +6,27 @@ homepage:
   url:   /
   param: { module: default, action: index }
 
+user:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /user
+    model:       sfGuardUser
+    module:      user
+
+permission:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /permission
+    model:       sfGuardPermission
+    module:      permission
+
+group:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /group
+    model:       sfGuardGroup
+    module:      group
+
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }
@@ -13,12 +34,3 @@ sf_guard_signin:
 sf_guard_signout:
   url:   /logout
   param: { module: sfGuardAuth, action: signout }
-
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
