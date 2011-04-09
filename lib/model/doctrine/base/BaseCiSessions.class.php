@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('CiSessions', 'doctrine');
 
 /**
  * BaseCiSessions
@@ -36,49 +34,30 @@ abstract class BaseCiSessions extends sfDoctrineRecord
         $this->setTableName('ci_sessions');
         $this->hasColumn('session_id', 'string', 40, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 40,
              ));
         $this->hasColumn('ip_address', 'string', 16, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 16,
              ));
         $this->hasColumn('user_agent', 'string', 50, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 50,
              ));
         $this->hasColumn('last_activity', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
              'unsigned' => true,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('user_data', 'string', null, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
-             'length' => '',
              ));
     }
 

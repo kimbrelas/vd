@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('UserInstantAuth', 'doctrine');
 
 /**
  * BaseUserInstantAuth
@@ -33,37 +31,22 @@ abstract class BaseUserInstantAuth extends sfDoctrineRecord
         $this->setTableName('user_instant_auth');
         $this->hasColumn('user_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('movie_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('hash', 'string', 32, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 32,
              ));
         $this->hasColumn('authtime', 'timestamp', 25, array(
              'type' => 'timestamp',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 25,
              ));
     }

@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('MovieForrent', 'doctrine');
 
 /**
  * BaseMovieForrent
@@ -36,47 +34,29 @@ abstract class BaseMovieForrent extends sfDoctrineRecord
         $this->setTableName('movie_forrent');
         $this->hasColumn('id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
              'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('movie_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('price', 'decimal', 4, array(
              'type' => 'decimal',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 4,
              'scale' => '2',
              ));
         $this->hasColumn('format', 'string', 3, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 3,
              ));
         $this->hasColumn('active', 'integer', 1, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 1,
              ));
     }

@@ -26,6 +26,8 @@ abstract class BaseMovieFormFilter extends BaseFormFilterDoctrine
       'runtime'        => new sfWidgetFormFilterInput(),
       'active'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'date_added'     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'credits_list'   => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Credit')),
+      'people_list'    => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Person')),
     ));
 
     $this->setValidators(array(
@@ -42,6 +44,8 @@ abstract class BaseMovieFormFilter extends BaseFormFilterDoctrine
       'runtime'        => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'active'         => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'date_added'     => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'credits_list'   => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Credit', 'required' => false)),
+      'people_list'    => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Person', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('movie_filters[%s]');
@@ -51,6 +55,42 @@ abstract class BaseMovieFormFilter extends BaseFormFilterDoctrine
     $this->setupInheritance();
 
     parent::setup();
+  }
+
+  public function addCreditsListColumnQuery(Doctrine_Query $query, $field, $values)
+  {
+    if (!is_array($values))
+    {
+      $values = array($values);
+    }
+
+    if (!count($values))
+    {
+      return;
+    }
+
+    $query
+      ->leftJoin($query->getRootAlias().'.movieCreditPerson movieCreditPerson')
+      ->andWhereIn('movieCreditPerson.credit_id', $values)
+    ;
+  }
+
+  public function addPeopleListColumnQuery(Doctrine_Query $query, $field, $values)
+  {
+    if (!is_array($values))
+    {
+      $values = array($values);
+    }
+
+    if (!count($values))
+    {
+      return;
+    }
+
+    $query
+      ->leftJoin($query->getRootAlias().'.movieCreditPerson movieCreditPerson')
+      ->andWhereIn('movieCreditPerson.person_id', $values)
+    ;
   }
 
   public function getModelName()
@@ -75,6 +115,8 @@ abstract class BaseMovieFormFilter extends BaseFormFilterDoctrine
       'runtime'        => 'Number',
       'active'         => 'Number',
       'date_added'     => 'Date',
+      'credits_list'   => 'ManyKey',
+      'people_list'    => 'ManyKey',
     );
   }
 }

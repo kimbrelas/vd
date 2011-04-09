@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('UserQueue', 'doctrine');
 
 /**
  * BaseUserQueue
@@ -33,35 +31,22 @@ abstract class BaseUserQueue extends sfDoctrineRecord
         $this->setTableName('user_queue');
         $this->hasColumn('user_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('movie_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('position', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('format', 'string', 3, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 3,
              ));
     }

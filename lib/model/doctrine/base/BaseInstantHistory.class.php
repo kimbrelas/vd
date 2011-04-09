@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('InstantHistory', 'doctrine');
 
 /**
  * BaseInstantHistory
@@ -33,36 +31,20 @@ abstract class BaseInstantHistory extends sfDoctrineRecord
         $this->setTableName('instant_history');
         $this->hasColumn('user_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('movie_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('seektime', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('did_finish', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 4,
              ));
     }

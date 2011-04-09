@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('States', 'doctrine');
 
 /**
  * BaseStates
@@ -36,49 +34,31 @@ abstract class BaseStates extends sfDoctrineRecord
         $this->setTableName('states');
         $this->hasColumn('id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
              'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 255,
              ));
         $this->hasColumn('abbr', 'string', 2, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 2,
              ));
         $this->hasColumn('sales_tax', 'decimal', 7, array(
              'type' => 'decimal',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0.000000',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 7,
              'scale' => '6',
              ));
         $this->hasColumn('charge_tax', 'integer', 1, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 1,
              ));
     }

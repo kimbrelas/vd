@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('ListLookup', 'doctrine');
 
 /**
  * BaseListLookup
@@ -27,18 +25,12 @@ abstract class BaseListLookup extends sfDoctrineRecord
         $this->setTableName('list_lookup');
         $this->hasColumn('list_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('movie_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
     }

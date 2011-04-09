@@ -29,6 +29,8 @@ abstract class BaseMovieForm extends BaseFormDoctrine
       'runtime'        => new sfWidgetFormInputText(),
       'active'         => new sfWidgetFormInputText(),
       'date_added'     => new sfWidgetFormDateTime(),
+      'credits_list'   => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Credit')),
+      'people_list'    => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Person')),
     ));
 
     $this->setValidators(array(
@@ -46,6 +48,8 @@ abstract class BaseMovieForm extends BaseFormDoctrine
       'runtime'        => new sfValidatorInteger(array('required' => false)),
       'active'         => new sfValidatorInteger(array('required' => false)),
       'date_added'     => new sfValidatorDateTime(),
+      'credits_list'   => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Credit', 'required' => false)),
+      'people_list'    => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Person', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('movie[%s]');
@@ -60,6 +64,106 @@ abstract class BaseMovieForm extends BaseFormDoctrine
   public function getModelName()
   {
     return 'Movie';
+  }
+
+  public function updateDefaultsFromObject()
+  {
+    parent::updateDefaultsFromObject();
+
+    if (isset($this->widgetSchema['credits_list']))
+    {
+      $this->setDefault('credits_list', $this->object->Credits->getPrimaryKeys());
+    }
+
+    if (isset($this->widgetSchema['people_list']))
+    {
+      $this->setDefault('people_list', $this->object->People->getPrimaryKeys());
+    }
+
+  }
+
+  protected function doSave($con = null)
+  {
+    $this->saveCreditsList($con);
+    $this->savePeopleList($con);
+
+    parent::doSave($con);
+  }
+
+  public function saveCreditsList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['credits_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Credits->getPrimaryKeys();
+    $values = $this->getValue('credits_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Credits', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Credits', array_values($link));
+    }
+  }
+
+  public function savePeopleList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['people_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->People->getPrimaryKeys();
+    $values = $this->getValue('people_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('People', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('People', array_values($link));
+    }
   }
 
 }

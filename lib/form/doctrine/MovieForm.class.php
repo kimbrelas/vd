@@ -12,5 +12,22 @@ class MovieForm extends BaseMovieForm
 {
   public function configure()
   {
+    $this->useFields(array(
+      'title',
+      'year',
+      'description',
+      'can_rent',
+      'can_buy',
+      'can_stream',
+      'film_type',
+      'mpaa',
+      'runtime',
+      'active'
+    ));
+    
+    $this->setWidget('can_rent', new sfWidgetFormInputCheckbox());
+    $this->setWidget('can_buy', new sfWidgetFormInputCheckbox());
+    $this->setWidget('can_stream', new sfWidgetFormInputCheckbox());
+    $this->setWidget('active', new sfWidgetFormInputCheckbox());
   }
 }

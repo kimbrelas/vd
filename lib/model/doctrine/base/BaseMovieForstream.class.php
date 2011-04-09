@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('MovieForstream', 'doctrine');
 
 /**
  * BaseMovieForstream
@@ -36,50 +34,28 @@ abstract class BaseMovieForstream extends sfDoctrineRecord
         $this->setTableName('movie_forstream');
         $this->hasColumn('id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
              'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('movie_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('bucket_name', 'string', 128, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 128,
              ));
         $this->hasColumn('domain_name', 'string', 128, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 128,
              ));
         $this->hasColumn('distribution_id', 'string', 128, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 128,
              ));
     }

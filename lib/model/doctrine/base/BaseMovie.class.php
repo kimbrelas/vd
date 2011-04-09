@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('Movie', 'doctrine');
 
 /**
  * BaseMovie
@@ -21,35 +19,44 @@ Doctrine_Manager::getInstance()->bindComponent('Movie', 'doctrine');
  * @property integer $runtime
  * @property integer $active
  * @property timestamp $date_added
+ * @property Doctrine_Collection $MovieCreditPerson
+ * @property Doctrine_Collection $Credits
+ * @property Doctrine_Collection $People
  * 
- * @method integer   getId()             Returns the current record's "id" value
- * @method string    getTitle()          Returns the current record's "title" value
- * @method integer   getYear()           Returns the current record's "year" value
- * @method string    getDescription()    Returns the current record's "description" value
- * @method integer   getCanRent()        Returns the current record's "can_rent" value
- * @method integer   getCanBuy()         Returns the current record's "can_buy" value
- * @method integer   getCanStream()      Returns the current record's "can_stream" value
- * @method float     getRatingAverage()  Returns the current record's "rating_average" value
- * @method integer   getRatingCount()    Returns the current record's "rating_count" value
- * @method string    getFilmType()       Returns the current record's "film_type" value
- * @method string    getMpaa()           Returns the current record's "mpaa" value
- * @method integer   getRuntime()        Returns the current record's "runtime" value
- * @method integer   getActive()         Returns the current record's "active" value
- * @method timestamp getDateAdded()      Returns the current record's "date_added" value
- * @method Movie     setId()             Sets the current record's "id" value
- * @method Movie     setTitle()          Sets the current record's "title" value
- * @method Movie     setYear()           Sets the current record's "year" value
- * @method Movie     setDescription()    Sets the current record's "description" value
- * @method Movie     setCanRent()        Sets the current record's "can_rent" value
- * @method Movie     setCanBuy()         Sets the current record's "can_buy" value
- * @method Movie     setCanStream()      Sets the current record's "can_stream" value
- * @method Movie     setRatingAverage()  Sets the current record's "rating_average" value
- * @method Movie     setRatingCount()    Sets the current record's "rating_count" value
- * @method Movie     setFilmType()       Sets the current record's "film_type" value
- * @method Movie     setMpaa()           Sets the current record's "mpaa" value
- * @method Movie     setRuntime()        Sets the current record's "runtime" value
- * @method Movie     setActive()         Sets the current record's "active" value
- * @method Movie     setDateAdded()      Sets the current record's "date_added" value
+ * @method integer             getId()                Returns the current record's "id" value
+ * @method string              getTitle()             Returns the current record's "title" value
+ * @method integer             getYear()              Returns the current record's "year" value
+ * @method string              getDescription()       Returns the current record's "description" value
+ * @method integer             getCanRent()           Returns the current record's "can_rent" value
+ * @method integer             getCanBuy()            Returns the current record's "can_buy" value
+ * @method integer             getCanStream()         Returns the current record's "can_stream" value
+ * @method float               getRatingAverage()     Returns the current record's "rating_average" value
+ * @method integer             getRatingCount()       Returns the current record's "rating_count" value
+ * @method string              getFilmType()          Returns the current record's "film_type" value
+ * @method string              getMpaa()              Returns the current record's "mpaa" value
+ * @method integer             getRuntime()           Returns the current record's "runtime" value
+ * @method integer             getActive()            Returns the current record's "active" value
+ * @method timestamp           getDateAdded()         Returns the current record's "date_added" value
+ * @method Doctrine_Collection getMovieCreditPerson() Returns the current record's "MovieCreditPerson" collection
+ * @method Doctrine_Collection getCredits()           Returns the current record's "Credits" collection
+ * @method Doctrine_Collection getPeople()            Returns the current record's "People" collection
+ * @method Movie               setId()                Sets the current record's "id" value
+ * @method Movie               setTitle()             Sets the current record's "title" value
+ * @method Movie               setYear()              Sets the current record's "year" value
+ * @method Movie               setDescription()       Sets the current record's "description" value
+ * @method Movie               setCanRent()           Sets the current record's "can_rent" value
+ * @method Movie               setCanBuy()            Sets the current record's "can_buy" value
+ * @method Movie               setCanStream()         Sets the current record's "can_stream" value
+ * @method Movie               setRatingAverage()     Sets the current record's "rating_average" value
+ * @method Movie               setRatingCount()       Sets the current record's "rating_count" value
+ * @method Movie               setFilmType()          Sets the current record's "film_type" value
+ * @method Movie               setMpaa()              Sets the current record's "mpaa" value
+ * @method Movie               setRuntime()           Sets the current record's "runtime" value
+ * @method Movie               setActive()            Sets the current record's "active" value
+ * @method Movie               setDateAdded()         Sets the current record's "date_added" value
+ * @method Movie               setMovieCreditPerson() Sets the current record's "MovieCreditPerson" collection
+ * @method Movie               setCredits()           Sets the current record's "Credits" collection
+ * @method Movie               setPeople()            Sets the current record's "People" collection
  * 
  * @package    dukaan
  * @subpackage model
@@ -63,137 +70,77 @@ abstract class BaseMovie extends sfDoctrineRecord
         $this->setTableName('movie');
         $this->hasColumn('id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
              'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('title', 'string', 75, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 75,
              ));
         $this->hasColumn('year', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('description', 'string', null, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
-             'notnull' => false,
-             'autoincrement' => false,
-             'length' => '',
              ));
         $this->hasColumn('can_rent', 'integer', 1, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 1,
              ));
         $this->hasColumn('can_buy', 'integer', 1, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 1,
              ));
         $this->hasColumn('can_stream', 'integer', 1, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 1,
              ));
         $this->hasColumn('rating_average', 'float', null, array(
              'type' => 'float',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '2.5',
              'notnull' => true,
-             'autoincrement' => false,
-             'length' => '',
              ));
         $this->hasColumn('rating_count', 'integer', 2, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 2,
              ));
         $this->hasColumn('film_type', 'string', 1, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => 'B',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 1,
              ));
         $this->hasColumn('mpaa', 'string', 5, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 5,
              ));
         $this->hasColumn('runtime', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('active', 'integer', 2, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 2,
              ));
         $this->hasColumn('date_added', 'timestamp', 25, array(
              'type' => 'timestamp',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 25,
              ));
     }
@@ -201,6 +148,18 @@ abstract class BaseMovie extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        
+        $this->hasMany('MovieCreditPerson', array(
+             'local' => 'id',
+             'foreign' => 'movie_id'));
+
+        $this->hasMany('Credit as Credits', array(
+             'refClass' => 'movieCreditPerson',
+             'local' => 'movie_id',
+             'foreign' => 'credit_id'));
+
+        $this->hasMany('Person as People', array(
+             'refClass' => 'movieCreditPerson',
+             'local' => 'movie_id',
+             'foreign' => 'person_id'));
     }
 }

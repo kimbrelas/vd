@@ -27,6 +27,27 @@ group:
     model:       sfGuardGroup
     module:      group
 
+movie:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /movie
+    model:       Movie
+    module:      movie
+
+credit:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /credit
+    model:       Credit
+    module:      credit
+
+person:
+  class: sfDoctrineRouteCollection
+  options:
+    prefix_path: /person
+    model:       Person
+    module:      person
+
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }

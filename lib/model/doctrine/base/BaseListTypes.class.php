@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('ListTypes', 'doctrine');
 
 /**
  * BaseListTypes
@@ -27,20 +25,14 @@ abstract class BaseListTypes extends sfDoctrineRecord
         $this->setTableName('list_types');
         $this->hasColumn('id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
              'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('type', 'string', 50, array(
              'type' => 'string',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '',
              'notnull' => true,
-             'autoincrement' => false,
              'length' => 50,
              ));
     }

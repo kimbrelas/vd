@@ -1,6 +1,4 @@
 <?php
-// Connection Component Binding
-Doctrine_Manager::getInstance()->bindComponent('SuggestCache', 'doctrine');
 
 /**
  * BaseSuggestCache
@@ -36,51 +34,28 @@ abstract class BaseSuggestCache extends sfDoctrineRecord
         $this->setTableName('suggest_cache');
         $this->hasColumn('id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
              'primary' => true,
              'autoincrement' => true,
              'length' => 4,
              ));
         $this->hasColumn('user_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('list_type', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('list_id', 'integer', 4, array(
              'type' => 'integer',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
              'length' => 4,
              ));
         $this->hasColumn('ratio', 'float', null, array(
              'type' => 'float',
-             'fixed' => 0,
-             'unsigned' => false,
-             'primary' => false,
              'default' => '0',
-             'notnull' => false,
-             'autoincrement' => false,
-             'length' => '',
              ));
     }
 
